@@ -52,7 +52,7 @@ task "lint", "Run coffeelint on backend files", ->
         console.log err
         console.log stdout
 
-task 'convert', 'Compile CoffeeScript into JavaScript (server)', ->
+task 'build', 'Compile CoffeeScript into JavaScript (server)', ->
   files = walk "server", []
   console.log "Compilation..."
   command = "coffee -cb server.coffee #{files.join ' '} "
